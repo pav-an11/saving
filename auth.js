@@ -100,7 +100,7 @@
         localStorage.setItem("cashbook_session_v1", JSON.stringify({ email, at: Date.now() }));
 
         setTimeout(() => {
-          window.location.href = "index.html";
+          window.location.href = "dashbord.html";
         }, 500);
       });
       return;
