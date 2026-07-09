@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Transaction Dashboard</h1>
+
+    <div class="summary">
+
+        <div class="card">
+            <h3>Total Balance</h3>
+            <p id="balance">₹0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Deposit</h3>
+            <p id="deposit">₹0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Withdraw</h3>
+            <p id="withdraw">₹0</p>
+        </div>
+
+    </div>
+
+    <div class="form">
+
+        <input type="text" id="description" placeholder="Description">
+
+        <input type="number" id="amount" placeholder="Amount">
+
+        <select id="type">
+            <option value="Deposit">Deposit</option>
+            <option value="Withdraw">Withdraw</option>
+        </select>
+
+        <button onclick="addTransaction()">Save</button>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="authGuard.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

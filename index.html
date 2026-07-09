@@ -3,73 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="log.css">
 </head>
 <body>
 
-<div class="container">
+    <form method="post" class="form-container" data-page="login">
 
-    <h1>Transaction Dashboard</h1>
+        <h2>Login Form</h2>
 
-    <div class="summary">
+        <div id="authMessage" style="margin-top: 12px; display:none;"></div>
 
-        <div class="card">
-            <h3>Total Balance</h3>
-            <p id="balance">₹0</p>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+
+        <div class="forgot-password">
+            <a href="pass.html">Forgot Password?</a>
         </div>
 
-        <div class="card">
-            <h3>Total Deposit</h3>
-            <p id="deposit">₹0</p>
-        </div>
+        <button type="submit">Login</button>
 
-        <div class="card">
-            <h3>Total Withdraw</h3>
-            <p id="withdraw">₹0</p>
-        </div>
+        <p>For a new account? <a href="rege.html">Sign Up</a></p>
 
-    </div>
 
-    <div class="form">
+    </form>
 
-        <input type="text" id="description" placeholder="Description">
-
-        <input type="number" id="amount" placeholder="Amount">
-
-        <select id="type">
-            <option value="Deposit">Deposit</option>
-            <option value="Withdraw">Withdraw</option>
-        </select>
-
-        <button onclick="addTransaction()">Save</button>
-
-    </div>
-
-    <table>
-
-        <thead>
-
-            <tr>
-
-                <th>Description</th>
-                <th>Amount</th>
-                <th>Type</th>
-                <th>Action</th>
-
-            </tr>
-
-        </thead>
-
-        <tbody id="tableBody">
-
-        </tbody>
-
-    </table>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="auth.js"></script>
 </body>
 </html>
