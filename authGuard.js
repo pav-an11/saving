@@ -13,14 +13,21 @@
   }
 
   function runGuard() {
-    if (!hasSession()) {
-      // Prevent dashboard from flashing
-      document.body.innerHTML = "";
-      window.location.replace("login.html");
-      return;
-    }
+    if (hasSession()) return;
+
+    // Prevent dashboard from flashing
+    document.documentElement.style.display = "none";
+
+    // Ensure we always go to the correct login page even on deep links
+    window.location.replace("/login.html");
   }
 
-  document.addEventListener("DOMContentLoaded", runGuard);
+  // Use DOMContentLoaded + also handle immediate execution
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", runGuard);
+  } else {
+    runGuard();
+  }
 })();
+
 
