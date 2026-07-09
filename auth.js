@@ -68,7 +68,7 @@
 
         setMessage(messageEl, "Registration successful. Redirecting to login...", "success");
         setTimeout(() => {
-          window.location.href = "login.html";
+          window.location.href = "dashbord.html";
         }, 800);
       });
 
